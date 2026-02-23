@@ -4,6 +4,8 @@ import group_profile from './group_profile.png'
 import bgImage1 from './bgImage1.png'
 import bgImage2 from './bgImage2.png'
 import hero_img from './hero_img.png'
+import water_quality_img from './WhatsApp Image 2026-02-23 at 15.22.54.jpeg'
+import water_theft_img from './WhatsApp Image 2026-02-23 at 15.22.54 (1).jpeg'
 import microsoft_logo from './microsoft_logo.png'
 import zoom_logo from './zoom_logo.png'
 import rakuten_logo from './rakuten_logo.png'
@@ -56,6 +58,8 @@ const assets = {
   bgImage1,
   bgImage2,
   hero_img,
+  water_quality_img,
+  water_theft_img,
   ads_icon,
   content_icon,
   marketing_icon,

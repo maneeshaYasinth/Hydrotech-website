@@ -1,17 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
 
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
-*{
-    font-family: "Manrope", sans-serif;
-    font-weight: 500;
-    cursor: none;
+* {
+    font-family: "Inter", "Manrope", sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
 }
 
-@theme{
-    --color-primary: #5048E5;
-    
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1a2332;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Outfit", "Inter", sans-serif;
+    font-weight: 600;
+}
+
+/* ========== Mobile-first base styles ========== */
+
+/* Images should never overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Touch-friendly tap targets */
+a,
+button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Improved inputs on mobile */
+input,
+textarea,
+select {
+    font-size: 16px;
+    /* Prevents iOS zoom on focus */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ========== Scrollbar ========== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+
+/* Hide scrollbar on mobile for cleaner look */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+    }
+}
+
+/* ========== Section alternating backgrounds ========== */
+.section-gray {
+    background-color: #f7f8fa;
+}
+
+.dark .section-gray {
+    background-color: #111827;
+}
+
+/* ========== Theme colors ========== */
+@theme {
+    --color-primary: #1565C0;
+    --color-secondary: #42A5F5;
+    --color-accent: #64B5F6;
+    --color-dark-bg: #0f172a;
+    --color-dark-card: #1e293b;
+}
+
+/* ========== Mobile breakpoint refinements ========== */
+
+/* Extra small phones (320px - Galaxy S5, iPhone SE 1st gen) */
+@media (max-width: 359px) {
+    html {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Small phones (360px-389px - Galaxy S8, Pixel) */
+@media (min-width: 360px) and (max-width: 389px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Medium phones (390px-413px - iPhone 14, 15) */
+@media (min-width: 390px) and (max-width: 413px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Larger phones (414px-479px - iPhone Plus, Pro Max) */
+@media (min-width: 414px) and (max-width: 479px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+/* Small tablets / large phones (480px-639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Reset for tablet and up */
+@media (min-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* ========== Smooth animations for mobile ========== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========== Partner logos auto-scroll animation ========== */
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-logos {
+    animation: scroll-logos 20s linear infinite;
+}
+
+.animate-scroll-logos:hover {
+    animation-play-state: paused;
 }
