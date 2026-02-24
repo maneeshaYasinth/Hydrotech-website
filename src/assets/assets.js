@@ -98,6 +98,5 @@ export const teamData = [
   { name: 'Varushini Gunaretnam', title: 'Content marketer', image: Varushy },
   { name: 'Selvanathan Rakukaran', title: 'IoT Developer', image: Raku },
   { name: 'Krishnaveny', title: 'Team Member', image: Krishnaveny },
-  //{ name: 'Roman Figurado', title: 'Performance manager', image: '' },
-  //{ name: 'Vibishek', title: 'Senior writer', image: '' },
+  
 ]
