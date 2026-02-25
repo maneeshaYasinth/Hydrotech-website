@@ -25,13 +25,9 @@ const Navbar = ({ theme, setTheme }) => {
           : 'bg-white dark:bg-gray-950'}`}>
 
       {/* Logo */}
-      <a href="#" className='flex items-center gap-2'>
-        <div className='w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0'>
-          <span className='text-white font-bold text-base font-[Outfit]'>H</span>
-        </div>
-        <span className='text-lg sm:text-xl font-bold text-primary dark:text-white font-[Outfit] tracking-tight leading-tight'>
-          Hydrotech Core<span className='hidden sm:inline text-xs font-normal text-gray-400 dark:text-gray-500 ml-1'>Pvt Ltd</span>
-        </span>
+      <a href="#" className='flex items-center'>
+        <img src={assets.hydrotech_logo} alt="HydroTech Logo"
+          style={{ height: '40px', width: '120px', objectFit: 'contain' }} />
       </a>
 
       {/* Desktop Nav Links */}
@@ -65,6 +61,7 @@ const Navbar = ({ theme, setTheme }) => {
           cursor-pointer hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-300 font-semibold'>
           Get Quotation <img src={assets.arrow_icon} width={14} alt="" />
         </a>
+
       </div>
     </motion.nav>
   )

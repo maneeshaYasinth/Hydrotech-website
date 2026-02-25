@@ -29,6 +29,7 @@ import logo_dark from './logo_dark.svg'
 import airbnb_logo from './airbnb_logo.svg'
 import google_logo from './google_logo.svg'
 import menu_icon_dark from './menu_icon_dark.svg'
+import hydrotech_logo from './hydrotech_logo.png'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
 
@@ -79,6 +80,7 @@ const assets = {
   menu_icon_dark,
   sun_icon,
   moon_icon,
+  hydrotech_logo,
   Kavindu,
   Krishnaveny,
   Maneesha,
@@ -98,5 +100,5 @@ export const teamData = [
   { name: 'Varushini Gunaretnam', title: 'Content marketer', image: Varushy },
   { name: 'Selvanathan Rakukaran', title: 'IoT Developer', image: Raku },
   { name: 'Krishnaveny', title: 'Team Member', image: Krishnaveny },
-  
+
 ]
