@@ -1,0 +1,22 @@
+{
+  "name": "Hydrotech Core Pvt Ltd",
+  "short_name": "Hydrotech",
+  "description": "Technology-driven company reimagining how water is managed in a digital world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077B6",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/hydrotech_logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
